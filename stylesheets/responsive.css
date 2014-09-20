@@ -222,7 +222,7 @@ MAX-WITH 480
 	.logo { margin-top: 20px;margin-bottom:0px;}
 	.ei-slider {height:260px;}
 /* 	.responsiveslide {margin-left: 0px !important;width:100% !Important;height: 200px !important;}
- */	.responsiveslide {margin-left: 0px; height: 200px !important;}
+ */	.responsiveslide {margin-left: 0px; width: 560px; height: 200px !important;}
 	.newsmargin{margin-left:0px;}
 	.floatright {float:none;}
 	#footer h1 {padding-top:20px;}

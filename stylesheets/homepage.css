@@ -193,6 +193,7 @@
 }
 .ei-slider-large li img{
 	height: 100%;
+	width: 100%;
 	filter: url(filters.svg#grayscale); /* Firefox */
 		filter: gray; /* IE */
 		-webkit-filter: grayscale(1); /* Webkit */
