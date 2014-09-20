@@ -220,7 +220,7 @@ MAX-WITH 480
 	.name {display:block;}
 	.noleftmarg {padding:0px !important;}	
 	.logo { margin-top: 20px;margin-bottom:0px;}
-	.ei-slider {height:260px;}
+	.ei-slider {height:200px;}
 	.responsiveslide {margin-left: 0px !important;width:100% !Important;height: 200px !important;}
 	.newsmargin{margin-left:0px;}
 	.floatright {float:none;}
