@@ -219,7 +219,12 @@
 				new_w	= c_w;
 			
 			}
-					
+			
+			if(new_h === 500) {
+				new_w = 1400;
+			} else if(new_h === 200) {
+				new_w = 560
+			}
 			return {
 				width	: new_w,
 				height	: new_h,
