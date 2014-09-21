@@ -225,6 +225,7 @@
 			} else if(new_h === 200) {
 				new_w = 560
 			}
+			
 			return {
 				width	: new_w,
 				height	: new_h,
