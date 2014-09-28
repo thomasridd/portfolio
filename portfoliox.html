@@ -13,7 +13,7 @@
 <title>Studio Francesca - Premium Theme by WowThemes.net</title>
 <!-- Included CSS Files-->
 <link rel="stylesheet" href="stylesheets/style.css">
-<link rel="stylesheet" href="stylesheets/prettyphoto.css"><!-- for gallery -->
+<link rel="stylesheet" href="stylesheets/nivoslider.css"><!-- nivo slider stylesheet -->
 <link rel="stylesheet" href="stylesheets/skins/teal.css"><!-- skin color -->
 <link rel="stylesheet" href="stylesheets/responsive.css">
 <!-- IE Fix for HTML5 Tags -->
@@ -22,6 +22,7 @@
   <![endif]-->
 </head>
 <body>
+
 <!--  HIDDEN PANEL 
 ================================================== -->
 <div id="panel">
@@ -82,8 +83,11 @@
 <div id="subheader">
 	<div class="row">
 		<div class="twelve columns">
-			<p>
-				 PORTFOLIO Tom Ridd
+			<p class="left">
+				 PROJECT DETAIL
+			</p>
+			<p class="right">
+				<a href="portofolio2.html">View more projects</a>
 			</p>
 		</div>
 	</div>
@@ -92,97 +96,91 @@
 </div>
 <!-- CONTENT 
 ================================================== -->
-<!-- <div class="row">
-	<div class="twelve columns">
-		CATEGORIES
-		<section id="options" class="clearfix">
-		<ul id="filters" class="option-set clearfix" data-option-key="filter">
-			<li><a href="#filter" data-option-value="*" class="portofoliobutton selected">Show all</a></li>
-			<li><a href="#filter" data-option-value=".nature" class="portofoliobutton">Nature</a></li>
-			<li><a href="#filter" data-option-value=".trains" class="portofoliobutton">Trains</a></li>
-			<li><a href="#filter" data-option-value=".castles" class="portofoliobutton">Castles</a></li>
+<div class="row">
+	<!-- PROJECT DESCRIPTION-->
+	<div class="six columns">
+		<div class="sectiontitle">
+			<h4>School Insight</h4>
+		</div>
+		
+		<!-- WHAT -->
+		<div class="panel">
+			<p>
+			In this project I have built a pipeline of open source data technologies to build a sophisticated data product. 
+			</p>
+		</div>
+		
+		<!-- CONTEXT -->
+		<p>
+			I wanted to do something big and real with data, a big practical project to contextualise learning. There is a 
+			vast quantity and variety of data publically available on schools, and I have domain knowledge to back the stats.
+		</p>
+		<p>
+			
+		</p>
+		<dl class="tabs">
+			<dd class="active"><a href="#simple1">Key technology</a></dd>
+			<dd><a href="#simple2">What we did</a></dd>
+			<dd><a href="#simple3">Client's Feedback</a></dd>
+		</dl>
+		<ul class="tabs-content">
+			<li class="active" id="simple1Tab">
+			<p>
+				 Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum venerunt. Sit enim idem caecus, debilis. Duo Reges: constructio interrete. Nulla tempus erat accumsan.
+			</p>
+			<div class="six columns noleftmargin">
+				<p>
+					<img src="images/check.png" alt=""><b>consectetur adipiscing</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>maxima parte</b>
+				</p>
+			</div>
+			<div class="six columns">
+				<p>
+					<img src="images/check.png" alt=""><b>genera formasque</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>quibus ad genera</b>
+				</p>
+			</div>
+			</li>
+			<li id="simple2Tab">
+			<p>
+				 Consectetur adipiscing elit. Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum.
+			</p>
+			<p>
+				<img src="images/check.png" alt=""> genera formasque
+			</p>
+			<p>
+				<img src="images/check.png" alt=""> quibus ad genera
+			</p>
+			<p>
+				 Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum venerunt. Sit enim idem caecus, debilis. Duo Reges: constructio interrete.
+			</p>
+			</li>
+			<li id="simple3Tab">
+			<p>
+				<i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum."</i>
+			</p>
+			<p>
+				<i>"Adipiscing elit. Et non ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad genera formasque generum."</i>
+			</p>
+			</li>
 		</ul>
-		</section>
 	</div>
-</div> -->
-
-<div id="portofolio" class="row">
-	<!-- Project 1-->
-	<div class="six columns category trains">
-		<h5>SCHOOL INSIGHT</h5>
-		<p>
-			 Full data product built with opensource software.
-		</p>
-		<p>
-			 Java, Python, Hadoop, MongoDB, ElasticSearch, Flask, Jinja2, Bootstrap, D3.js.
-		</p>
-		<div class="portofoliothumb">
-			<div class="portofoliothumboverlay">
-				<div class="inner">
-					<a class="projectdetail" href="portfolio1.html">+ Project Details</a>
-				</div>
+	<!-- end main content-->
+	<!-- SLIDER-->
+	<div class="six columns">
+		<div class="slider-wrapper theme-default">
+			<div id="slider" class="nivoSlider detailslider">
+				<img src="images/temp/nivo1.jpg" data-thumb="" alt=""/>
+				<img src="images/temp/nivo2.jpg" data-thumb="" alt=""/>
+				<img src="images/temp/nivo3.jpg" data-thumb="" alt=""/>
 			</div>
-			<!-- image here -->
-			<img src="images/temp/folio1.jpg" alt="">
 		</div>
 	</div>
-	<!-- Project 2-->
-	<div class="six columns category castles nature">
-		<h5>CATS AND DOGS</h5>
-		<p>
-			Machine-learning contest with unstructured data
-		</p>
-		<p>
-			R, Java, OpenCV, 
-		</p>
-		<div class="portofoliothumb">
-			<div class="portofoliothumboverlay">
-				<div class="viewgallery">
-					<a data-gal="prettyPhoto[gallery]" href="images/temp/folio2.jpg"><img src="images/playgal.png" class="left galleryicon" alt=""> Gallery</a>
-				</div>
-				<div class="inner">
-					<a class="projectdetail" href="portofoliodetail.html">+ Project Details</a>
-				</div>
-			</div>
-			<img src="images/temp/folio2.jpg" alt=""/>
-		</div>
-	</div>
-	<!-- Project 3-->
-	<div class="six columns category nature">
-		<h5>SHADOW LIGHT</h5>
-		<p>
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</p>
-		<div class="portofoliothumb">
-			<div class="portofoliothumboverlay">
-				<div class="viewgallery">
-					<a data-gal="prettyPhoto[gallery]" href="images/temp/folio3.jpg"><img src="images/playgal.png" class="left galleryicon" alt=""> Gallery</a>
-				</div>
-				<div class="inner">
-					<a class="projectdetail" href="portofoliodetail.html">+ Project Details</a>
-				</div>
-			</div>
-			<img src="images/temp/folio3.jpg" alt=""/>
-		</div>
-	</div>
-	<!-- Project 4-->
-	<div class="six columns category nature castles">
-		<h5>WHITE CASTLE</h5>
-		<p>
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</p>
-		<div class="portofoliothumb">
-			<div class="portofoliothumboverlay">
-				<div class="viewgallery">
-					<a data-gal="prettyPhoto[gallery]" href="images/temp/folio4.jpg"><img src="images/playgal.png" class="left galleryicon" alt=""> Gallery</a>
-				</div>
-				<div class="inner">
-					<a class="projectdetail" href="portofoliodetail.html">+ Project Details</a>
-				</div>
-			</div>
-			<img src="images/temp/folio4.jpg" alt=""/>
-		</div>
-	</div>
+	<!-- end sliderr-->
 </div>
 <div class="hr">
 </div>
@@ -254,6 +252,7 @@
 ================================================== -->
 <!-- Javascript files placed here for faster loading -->
 <script src="javascripts/foundation.min.js"></script>
+<script src="javascripts/jquery.nivo.slider.pack.js"></script>
 <script src="javascripts/jquery.cycle.js"></script>
 <script src="javascripts/app.js"></script>
 <script src="javascripts/modernizr.foundation.js"></script>
@@ -264,8 +263,5 @@
 <script src="javascripts/responsivemenu.js"></script>
 <script src="javascripts/jquery.tweet.js"></script>
 <script src="javascripts/twitterusername.js"></script>
-<script src="javascripts/jquery.isotope.min.js"></script>
-<script src="javascripts/jquery.prettyPhoto.js"></script>
-<script src="javascripts/custom.js"></script>
 </body>
 </html>
