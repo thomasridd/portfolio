@@ -14,7 +14,7 @@
 <!-- Included CSS Files-->
 <link rel="stylesheet" href="stylesheets/style.css">
 <link rel="stylesheet" href="stylesheets/nivoslider.css"><!-- nivo slider stylesheet -->
-<link rel="stylesheet" href="stylesheets/skins/teal.css"><!-- skin color -->
+<link rel="stylesheet" href="stylesheets/skins/blue.css"><!-- skin color -->
 <link rel="stylesheet" href="stylesheets/responsive.css">
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
@@ -23,21 +23,11 @@
 </head>
 <body>
 
-<!--  HIDDEN PANEL 
+<!-- HIDDEN PANEL 
+
+TRASH THE HIDDEN PANEL
 ================================================== -->
-<div id="panel">
-	<div class="row">
-		<div class="twelve columns">
-			<img src="images/info.png" class="pics" alt="info">
-			<div class="infotext">
-				Thank you for visiting my portfolio!
-			</div>
-		</div>
-	</div>
-</div>
-<p class="slide">
-	<a href="#" class="btn-slide"></a>
-</p>
+
 <!-- HEADER
 ================================================== -->
 <div class="row">	
@@ -55,17 +45,11 @@
 					</li>
 
 					<li>
-						<a href="resume.html">Resume</a>
+						<a href="about.html">About</a>
 					</li>
 									
 					<li>
 					<a href="portfolio.html">Portfolio</a>
-<!-- 						<ul>
-						<li><a href="portfolio1.html">School Insight</a></li>
-						<li><a href="portfolio2.html">Cats and Dogs</a></li>
-						<li><a href="portfolio3.html">WikiWhere - iOS</a></li>						
-						<li><a href="portfolio4.html">LaSwap 2014</a></li>
-						</ul> -->
 					</li>
 					
 					<li>
@@ -78,6 +62,7 @@
 </div>
 <div class="clear">
 </div>
+
 <!-- SUBHEADER
 ================================================== -->
 <div id="subheader">
@@ -85,9 +70,6 @@
 		<div class="twelve columns">
 			<p class="left">
 				 PROJECT DETAIL
-			</p>
-			<p class="right">
-				<a href="portofolio2.html">View more projects</a>
 			</p>
 		</div>
 	</div>
@@ -106,8 +88,8 @@
 		<!-- WHAT -->
 		<div class="panel">
 			<p>
-			Cats and Dogs was my first Kaggle contest which I took as a practical way of consolidating the Machine Learning course I had just finished. 
-			I overreached myself, and I mean hugely, but it was an enjoyable failure
+			I jumped in to Kaggle as a way of consolidating the Machine Learning course I had just finished. 
+			I don't mind saying I overreached myself, and I mean hugely, but it was an enjoyable failure
 			</p>
 		</div>
 			
@@ -119,12 +101,14 @@
 			Simple.
 		</p>
 		<p>
-			Not so much. Working with images is tough work and required a whole bunch of skills to be learnt before any of my new 
-			machine-learning knowledge could be applied.
+			Not so much. 
 		</p>
 		<p>
-			My final product was an 86% accurate neural network but for a subproblem along the way.
+			Images were hard work. Even the basics. My final product was 86% accurate which is good, only for a sub problem which is less so, and ran slowly which
+			was terminal to the project.
 		</p>
+	
+		
 		<dl class="tabs">
 			<dd class="active"><a href="#simple1">Key technology</a></dd>
 			<dd><a href="#simple2">What I did</a></dd>
@@ -153,7 +137,7 @@
 			</div>
 			</li>
 			<li id="simple2Tab">
-				<p>
+<!-- 				<p>
 					I came at this problem with a two step approach. First I would train an algorithm that would, effectively, crop an
 					image to the part that contained an animal. Second I would use the cropped image to work out the kind of animal. 
 				</p>
@@ -164,7 +148,11 @@
 				</p>
 				<p>	
 					This produced some good results for the first part of my plan. Good results but slow. What did for me in the end was processing time. 
-				</p>
+				</p> -->
+				<p>
+					The subproblem solved was to identify the interesting features of an image (using Java and OpenCV) and 
+					reject all those which were neither cat or dog (using a neural network in R). 
+				</p>	
 			</li>
 			<li id="simple3Tab">
 			<p>

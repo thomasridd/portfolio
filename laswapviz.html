@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width" />
+<title>Tom Ridd - Portfolio</title>
+<!-- Included CSS Files-->
+<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="stylesheets/skins/blue.css">
+<!-- skin color -->
+<link rel="stylesheet" href="stylesheets/responsive.css">
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<style>
+
+.chord path {
+  fill-opacity: .67;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+</style>
+
+<body>
+	<!-- HIDDEN PANEL 
+
+TRASH THE HIDDEN PANEL
+================================================== -->
+
+	<!-- HEADER
+================================================== -->
+	<div class="row">
+		<div class="four columns">
+			<div class="logo">
+				<a href="index.html"><h4>Tom Ridd</h4></a>
+			</div>
+		</div>
+		<div class="eight columns noleftmarg">
+			<nav id="nav-wrap">
+				<ul class="nav-bar sf-menu">
+
+					<li class="current"><a href="index.html">Home</a></li>
+
+					<li><a href="about.html">About</a></li>
+
+					<li><a href="portfolio.html">Portfolio</a></li>
+
+					<li><a href="contact.html">Contact</a></li>
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<!-- SUBHEADER
+================================================== -->
+	<div id="subheader">
+		<div class="row">
+			<div class="twelve columns">
+				<p class="left">ABOUT ME</p>
+			</div>
+		</div>
+	</div>
+	<div class="hr"></div>
+	<!-- CONTENT 
+================================================== -->
+	<div class="row">
+		<!-- MAIN CONTENT-->
+		<div class="eight columns">
+			<!-- Our History-->
+			<div class="sectiontitle">
+				<h4>LaSwap Interconnectivity Chord Diagram</h4>
+			</div>
+			<!-- IN SHORT I DO MOST OF DATA SCIENCE ALREADY AND I WILL BE QUICK TO PICK UP WHAT I DON'T -->
+			<p>
+				The LaSwap Viz project is my way of teaching myself some advanced visualization.
+			</p>
+			<p>
+				LaSwap is a consortium of 4 sixth forms. The way it works is that students have a 'roll' school
+				but can take courses from across the consortium. 
+			</p>
+			<p>
+				This chord diagram shows how the interconnectivity of roll and teaching between the schools
+			</p>
+			
+			<script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+			<div id="here"></div>
+			<script type="text/javascript">
+				// LaSwap combination table
+				var matrix = [ [ 563, 91, 126, 0, 75 ],
+						[ 65, 624, 103, 0, 73 ], [ 81, 75, 497, 0, 169 ],
+						[ 9, 5, 70, 0, 36 ], [ 75, 63, 192, 0, 269 ] ];
+
+				var chord = d3.layout.chord().padding(.05).sortSubgroups(
+						d3.descending).matrix(matrix);
+
+				var width = 500, height = 500, innerRadius = Math.min(width,
+						height) * .41, outerRadius = innerRadius * 1.1;
+
+				var fill = d3.scale.ordinal().domain(d3.range(5))
+						.range(
+								[ "#f00055", "#009252", "#7c2479", "#000000",
+										"#00aace" ]);
+
+				var svg = d3.select("#here").append("svg").attr("width", width)
+						.attr("height", height).append("g").attr(
+								"transform",
+								"translate(" + width / 2 + "," + height / 2
+										+ ")");
+
+				svg.append("g").selectAll("path").data(chord.groups).enter()
+						.append("path").style("fill", function(d) {
+							return fill(d.index);
+						}).style("stroke", function(d) {
+							return fill(d.index);
+						}).attr(
+								"d",
+								d3.svg.arc().innerRadius(innerRadius)
+										.outerRadius(outerRadius)).on(
+								"mouseover", fade(.1)).on("mouseout", fade(1));
+
+				var ticks = svg.append("g").selectAll("g").data(chord.groups)
+						.enter().append("g").selectAll("g").data(groupTicks)
+						.enter().append("g").attr(
+								"transform",
+								function(d) {
+									return "rotate("
+											+ (d.angle * 180 / Math.PI - 90)
+											+ ")" + "translate(" + outerRadius
+											+ ",0)";
+								});
+
+				ticks.append("line").attr("x1", 1).attr("y1", 0).attr("x2", 5)
+						.attr("y2", 0).style("stroke", "#000");
+
+				ticks
+						.append("text")
+						.attr("x", 8)
+						.attr("dy", ".35em")
+						.attr(
+								"transform",
+								function(d) {
+									return d.angle > Math.PI ? "rotate(180)translate(-16)"
+											: null;
+								}).style("text-anchor", function(d) {
+							return d.angle > Math.PI ? "end" : null;
+						}).text(function(d) {
+							return d.label;
+						});
+
+				svg.append("g").attr("class", "chord").selectAll("path").data(
+						chord.chords).enter().append("path").attr("d",
+						d3.svg.chord().radius(innerRadius)).style("fill",
+						function(d) {
+							return fill(d.target.index);
+						}).style("opacity", 1);
+
+				// Returns an array of tick angles and labels, given a group.
+				function groupTicks(d) {
+					var k = (d.endAngle - d.startAngle) / d.value;
+					return d3.range(0, d.value, 25).map(function(v, i) {
+						return {
+							angle : v * k + d.startAngle,
+							label : i % 5 ? null : v
+						};
+					});
+				}
+
+				// Returns an event handler for fading a given chord group.
+				function fade(opacity) {
+					return function(g, i) {
+						svg.selectAll(".chord path").filter(function(d) {
+							return d.source.index != i && d.target.index != i;
+						}).transition().style("opacity", opacity);
+					};
+				}
+			</script>
+			<br></br>
+
+			<!-- Our History-->
+			<div class="sectiontitle">
+				<h4>Education.</h4>
+			</div>
+			<p>2:1 BSc Applied Mathematics (Warwick 2000)</p>
+			<p>MSc with Distinction - Management Science and Operational
+				Research (Warwick 2001)</p>
+
+
+			<!-- Accordion-->
+			<dl class="tabs">
+				<dd class="active">
+					<a href="#simple1">Tech words</a>
+				</dd>
+				<dd>
+					<a href="#simple2">Courses</a>
+				</dd>
+				<dd>
+					<a href="#simple3">Current</a>
+				</dd>
+			</dl>
+			<ul class="tabs-content">
+				<li class="active" id="simple1Tab">
+					<p>This is simple tab 1's content. Pretty neat, huh? Lorem
+						ipsum dolor sit amet, consectetur adipiscing elit. Et non ex
+						maxima parte de tota iudicabis? Item de contrariis, a quibus ad
+						genera formasque generum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
+						non ex maxima parte de tota iudicabis? Item de contrariis, a
+						quibus ad genera formasque generum venerunt. Sit enim idem caecus,
+						debilis. Duo Reges: constructio interrete.</p>
+					<p>Sit enim idem caecus, debilis. Duo Reges: constructio
+						interrete.</p>
+				</li>
+				<li id="simple2Tab">This is simple tab 2's content. Now you see
+					it! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et non
+					ex maxima parte de tota iudicabis? Item de contrariis, a quibus ad
+					genera formasque generum.</li>
+				<li id="simple3Tab">This is simple tab 3's content. It's, you
+					know...okay. Lorem ipsum dolor sit amet, consectetur adipiscing
+					elit. Et non ex maxima parte de tota iudicabis? Item de contrariis,
+					a quibus ad genera formasque generum.</li>
+				<li id="simple4Tab">This is simple tab 3's content. It's, you
+					know...okay. Lorem ipsum dolor sit amet, consectetur adipiscing
+					elit. Et non ex maxima parte de tota iudicabis? Item de contrariis,
+					a quibus ad genera formasque generum.</li>
+			</ul>
+		</div>
+		<!-- end main content-->
+
+		<!-- SIDEBAR-->
+		<div class="four columns">
+			<div class="teamwrap teambox">
+				<img src="images/temp/team1.jpg" alt="">
+				<div class="mask">
+					<h2>Tom Ridd</h2>
+					<p>One of our best shooting model, working for this company
+						since the beginning.</p>
+				</div>
+			</div>
+			<div class="teamwrap teambox">
+				<img src="images/portfolio_large/_about_2.png" alt="">
+				<div class="mask">
+					<h2>Data Science</h2>
+					<p>One of our best shooting model, working for this company
+						since the beginning.</p>
+				</div>
+			</div>
+			<div class="teamwrap teambox">
+				<img src="images/temp/team3.jpg" alt="">
+				<div class="mask">
+					<h2>Luna Galliano</h2>
+					<p>One of our best shooting model, working for this company
+						since the beginning.</p>
+					<div class="social socialteam facebook">
+						<a href="#"></a>
+					</div>
+					<div class="social socialteam twitter">
+						<a href="#"></a>
+					</div>
+					<div class="social socialteam deviantart">
+						<a href="#"></a>
+					</div>
+					<div class="social socialteam flickr">
+						<a href="#"></a>
+					</div>
+					<div class="social socialteam dribbble">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end sidebar -->
+	</div>
+	<div class="hr"></div>
+	<!-- TWITTER
+================================================== -->
+	<div class="tweetarea">
+		<div class="tweettext">
+			<div class="row">
+				<div class="twelve columns">
+					<div class="tweet"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOOTER 
+================================================== -->
+	<div id="footer">
+		<footer class="row">
+			<p class="back-top floatright">
+				<a href="#top"><span></span></a>
+			</p>
+			<div class="four columns">
+				<h1>ABOUT US</h1>
+				Our goal is to keep clients satisfied!
+			</div>
+
+		</footer>
+	</div>
+	<div class="copyright">
+		<div class="row">
+			<div class="six columns">
+				&copy;<span class="small"> Copyright 2014 Thomas Ridd</span>
+			</div>
+		</div>
+	</div>
+	<!-- JAVASCRIPTS 
+================================================== -->
+	<!-- Javascript files placed here for faster loading -->
+	<script src="javascripts/foundation.min.js" type="text/javascript"></script>
+	<script src="javascripts/formvalidation.js" type="text/javascript"></script>
+	<script src="javascripts/jquery.cycle.js" type="text/javascript"></script>
+	<script src="javascripts/app.js" type="text/javascript"></script>
+	<script src="javascripts/modernizr.foundation.js"
+		type="text/javascript"></script>
+	<script src="javascripts/slidepanel.js" type="text/javascript"></script>
+	<script src="javascripts/scrolltotop.js" type="text/javascript"></script>
+	<script src="javascripts/hoverIntent.js" type="text/javascript"></script>
+	<script src="javascripts/superfish.js" type="text/javascript"></script>
+	<script src="javascripts/responsivemenu.js" type="text/javascript"></script>
+
+</body>
+</html>
