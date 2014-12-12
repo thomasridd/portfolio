@@ -161,6 +161,41 @@ footer {
     background-color: #f8f8f8;
 }
 
+.subpage-header {
+    padding-top: 40px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 40px;
+    text-align: center;
+    height: 280px;
+    color: #f8f8f8;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.background-main {
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.subpage-message {
+    position: absolute;
+    padding-top: 10px;
+}
+.subpage-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.subpage-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.subpage-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
 p.copyright {
     margin: 15px 0 0;
 }
