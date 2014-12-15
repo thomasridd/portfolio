@@ -177,8 +177,9 @@ footer {
 }
 
 .subpage-message {
-    position: absolute;
-    padding-top: 10px;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 70%;
 }
 .subpage-message > h1 {
     margin: 0;
