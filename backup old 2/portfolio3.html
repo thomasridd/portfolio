@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width"/>
+<title>Tom Ridd - Portfolio</title>
+<!-- Included CSS Files-->
+<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="stylesheets/nivoslider.css"><!-- nivo slider stylesheet -->
+<link rel="stylesheet" href="stylesheets/skins/blue.css"><!-- skin color -->
+<link rel="stylesheet" href="stylesheets/responsive.css">
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<!-- HIDDEN PANEL 
+
+TRASH THE HIDDEN PANEL
+================================================== -->
+
+<!-- HEADER
+================================================== -->
+<div class="row">	
+		<div class="four columns">
+			<div class="logo">
+				<a href="index.html"><h4>Tom Ridd</h4></a>
+			</div>
+		</div>
+		<div class="eight columns noleftmarg">		
+			<nav id="nav-wrap">
+				<ul class="nav-bar sf-menu">
+				
+					<li class="current">
+						<a href="index.html">Home</a>
+					</li>
+
+					<li>
+						<a href="about.html">About</a>
+					</li>
+									
+					<li>
+					<a href="portfolio.html">Portfolio</a>
+					</li>
+					
+					<li>
+					<a href="contact.html">Contact</a>
+					</li>
+					
+				</ul>
+				</nav>
+		</div>	
+</div>
+<div class="clear">
+</div>
+
+<!-- SUBHEADER
+================================================== -->
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 PROJECT DETAIL
+			</p>
+			<p class="right">
+				 <a href="portfolio4.html">next>></a>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+	<!-- PROJECT DESCRIPTION-->
+	<div class="six columns">
+		<div class="sectiontitle">
+			<h4>WikiWhere</h4>
+		</div>
+
+		<!-- WHAT -->
+		<div class="panel">
+			<p>
+				WikiWhere is a travel app for iPhone that sources APIs from around the net to pick up nearby wikipedia articles.
+			</p>
+		</div>
+			
+		<!-- CONTEXT -->
+		<p>
+			I have released two iOS apps on the AppStore. 
+			WikiWhere was my second and favourite. 
+		</p>
+		<p>
+			The challenge of WikiWhere was detail versus speed when it came to pulling data which I solved as a race between several online sources.
+		</p>
+		
+		<dl class="tabs">
+			<dd class="active"><a href="#simple1">Key tech</a></dd>
+			<dd><a href="#simple2">What I did</a></dd>
+			<dd><a href="#simple3">Similar</a></dd>
+		</dl>
+		<ul class="tabs-content">
+			<li class="active" id="simple1Tab">
+			<div class="six columns noleftmargin">
+				<p>
+					<img src="images/check.png" alt=""><b>iOS programming</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>APIs</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>REST</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>Geocoding</b>
+				</p>
+			</div>
+
+			<div class="six columns">
+				<p>
+					<img src="images/check.png" alt=""><b>JSON</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>NoSQL</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>Semantic Web</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>SPARQL</b>
+				</p>
+			</div>
+			</li>
+			<li id="simple2Tab">
+
+				<p>	
+					iOS design and programming was done with Objective-C with X-Code. 
+				</p>
+				<p> 
+					Data sources I drew on were WikiLocation (REST API, fast, simple) 
+					and alternately DBPedia and YAGO (SPARQL endpoints, slow, unreliable, highly detailed). Also Wikipedia itself of course.
+				</p>
+			</li>
+			<li id="simple3Tab">
+			<p>
+				<img src="images/check.png" alt=""> iPad app - CrowFlies
+			</p>
+			<p>
+				<img src="images/check.png" alt=""> Hackathon - Savvy
+			</p>
+			</li>
+		</ul>
+	</div>
+	<!-- end main content-->
+	<!-- SLIDER-->
+	<div class="six columns">
+		<div class="slider-wrapper theme-default">
+			<div id="slider" class="nivoSlider detailslider">
+				<img src="images/portfoliolarge/portfolio31.jpg" data-thumb="" alt=""/>
+				<img src="images/portfoliolarge/portfolio32.jpg" data-thumb="" alt=""/>
+				<img src="images/portfoliolarge/portfolio33.jpg" data-thumb="" alt=""/>
+			</div>
+		</div>
+	</div>
+	<!-- end sliderr-->
+</div>
+<div class="hr">
+</div>
+
+<!-- FOOTER 
+================================================== -->
+<div id="footer">
+	<footer class="row">
+	<p class="back-top floatright">
+		<a href="#top"><span></span></a>
+	</p>
+	<div class="six columns">
+		<h1>WHAT'S UP NOW?</h1>
+		 <a href="http://thomasridd.github.io/schools-viz">Visualisation with D3.js</a> - and I'm having quite some fun
+	</div>
+	</footer>
+</div>
+<div class="copyright">
+	<div class="row">
+		<div class="six columns">
+			 &copy;<span class="small"> Copyright 2014 Tom Ridd</span>
+		</div>
+		<div class="six columns">
+			<span class="small floatright"> Template "Studio Francesca" - WowThemes.net</span>
+		</div>
+	</div>
+</div>
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="javascripts/foundation.min.js"></script>
+<script src="javascripts/jquery.nivo.slider.pack.js"></script>
+<script src="javascripts/jquery.cycle.js"></script>
+<script src="javascripts/app.js"></script>
+<script src="javascripts/modernizr.foundation.js"></script>
+<script src="javascripts/slidepanel.js"></script>
+<script src="javascripts/scrolltotop.js"></script>
+<script src="javascripts/hoverIntent.js"></script>
+<script src="javascripts/superfish.js"></script>
+<script src="javascripts/responsivemenu.js"></script>
+<script src="javascripts/jquery.tweet.js"></script>
+<script src="javascripts/twitterusername.js"></script>
+</body>
+</html>

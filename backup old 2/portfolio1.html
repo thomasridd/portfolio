@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width"/>
+<title>Tom Ridd - Portfolio</title>
+<!-- Included CSS Files-->
+<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="stylesheets/nivoslider.css"><!-- nivo slider stylesheet -->
+<link rel="stylesheet" href="stylesheets/skins/blue.css"><!-- skin color -->
+<link rel="stylesheet" href="stylesheets/responsive.css">
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<!-- HIDDEN PANEL 
+
+TRASH THE HIDDEN PANEL
+================================================== -->
+
+<!-- HEADER
+================================================== -->
+<div class="row">	
+		<div class="four columns">
+			<div class="logo">
+				<a href="index.html"><h4>Tom Ridd</h4></a>
+			</div>
+		</div>
+		<div class="eight columns noleftmarg">		
+			<nav id="nav-wrap">
+				<ul class="nav-bar sf-menu">
+				
+					<li class="current">
+						<a href="index.html">Home</a>
+					</li>
+
+					<li>
+						<a href="about.html">About</a>
+					</li>
+									
+					<li>
+					<a href="portfolio.html">Portfolio</a>
+					</li>
+					
+					<li>
+					<a href="contact.html">Contact</a>
+					</li>
+					
+				</ul>
+				</nav>
+		</div>	
+</div>
+<div class="clear">
+</div>
+
+<!-- SUBHEADER
+================================================== -->
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p class="left">
+				 PROJECT DETAIL
+			</p>
+			<p class="right">
+				 <a href="portfolio2.html">next>></a>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+	<!-- PROJECT DESCRIPTION-->
+	<div class="six columns">
+		<div class="sectiontitle">
+			<h4>School Insight</h4>
+		</div>
+
+		<!-- WHAT -->
+		<div class="panel">
+			<p>
+				In this project I have built a pipeline of opensource data technologies to exploit the wealth of publically available 
+				information on schools.
+			</p>
+		</div>
+			
+		<!-- CONTEXT -->
+		<p>
+			I use this project as a platform to practice my data developer skillset. Data wrangling with Python, NoSQL databases, web frameworks, searchable data indices, 
+			JavaScript visualisation, even a bit of Hadoop (in the form of Pig). 
+		</p>
+		<p>
+			My current subproject is to include data pulled from the Ofsted website by subjecting it to some 
+			simple Natural Language processing. 
+		</p>
+		<dl class="tabs">
+			<dd class="active"><a href="#simple1">Key tech</a></dd>
+			<dd><a href="#simple2">What I did</a></dd>
+			<dd><a href="#simple3">Similar</a></dd>
+		</dl>
+		<ul class="tabs-content">
+			<li class="active" id="simple1Tab">
+			<div class="six columns noleftmargin">
+				<p>
+					<img src="images/check.png" alt=""><b>Java</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>Python</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>Hadoop (Pig)</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>MongoDB</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>ElasticSearch</b>
+				</p>
+			</div>
+			<div class="six columns">
+				<p>
+					<img src="images/check.png" alt=""><b>Flask</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>Jinja2</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>BootStrap</b>
+				</p>
+				<p>
+					<img src="images/check.png" alt=""><b>D3.js</b>
+				</p>
+			</div>
+			</li>
+			<li id="simple2Tab">
+				<p>
+					The pipeline I have built draws largely upon one I picked up from Agile Big Data by Russell Jurney.
+				</p>
+				<p> 
+					Data is downloaded or pulled from the web using Python and wrangled into a more acceptable format. 
+					Hadoop, in the form of Pig, uploads it to a MongoDB database generating some interesting analytics as it goes.
+					The result is displayed on a web page using a lightweight web framework.
+				</p>
+			</li>
+			<li id="simple3Tab">
+			<p>
+				<img src="images/check.png" alt=""> Hackathon - Public Sector Data
+			</p>
+			<p>
+				<img src="images/check.png" alt=""> Hackathon - Project Noah
+			</p>
+			</li>
+		</ul>
+	</div>
+	<!-- end main content-->
+	<!-- SLIDER-->
+	<div class="six columns">
+		<div class="slider-wrapper theme-default">
+			<div id="slider" class="nivoSlider detailslider">
+				<img src="images/portfoliolarge/portfolio11.jpg" data-thumb="" alt=""/>
+				<img src="images/portfoliolarge/portfolio12.jpg" data-thumb="" alt=""/>
+				<img src="images/portfoliolarge/portfolio13.jpg" data-thumb="" alt=""/>
+			</div>
+		</div>
+	</div>
+	<!-- end sliderr-->
+</div>
+<div class="hr">
+</div>
+
+<!-- FOOTER 
+================================================== -->
+<div id="footer">
+	<footer class="row">
+	<p class="back-top floatright">
+		<a href="#top"><span></span></a>
+	</p>
+	<div class="six columns">
+		<h1>WHAT'S UP NOW?</h1>
+		 <a href="http://thomasridd.github.io/schools-viz">Visualisation with D3.js</a> - and I'm having quite some fun
+	</div>
+	</footer>
+</div>
+<div class="copyright">
+	<div class="row">
+		<div class="six columns">
+			 &copy;<span class="small"> Copyright 2014 Tom Ridd</span>
+		</div>
+		<div class="six columns">
+			<span class="small floatright"> Template "Studio Francesca" - WowThemes.net</span>
+		</div>
+	</div>
+</div>
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="javascripts/foundation.min.js"></script>
+<script src="javascripts/jquery.nivo.slider.pack.js"></script>
+<script src="javascripts/jquery.cycle.js"></script>
+<script src="javascripts/app.js"></script>
+<script src="javascripts/modernizr.foundation.js"></script>
+<script src="javascripts/slidepanel.js"></script>
+<script src="javascripts/scrolltotop.js"></script>
+<script src="javascripts/hoverIntent.js"></script>
+<script src="javascripts/superfish.js"></script>
+<script src="javascripts/responsivemenu.js"></script>
+</body>
+</html>
