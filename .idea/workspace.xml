@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a1ed2a3-c2c8-4427-a382-62513ec584da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight.html" afterPath="$PROJECT_DIR$/insight.html" />
     </list>
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="insight.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="insight.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/insight.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.125" vertical-offset="2415" max-vertical-offset="3120">
-              <caret line="174" column="57" selection-start-line="174" selection-start-column="57" selection-end-line="174" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.71100914" vertical-offset="765" max-vertical-offset="3120">
+              <caret line="82" column="128" selection-start-line="82" selection-start-column="128" selection-end-line="82" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -59,18 +60,18 @@
       <file leaf-file-name="laswap2014.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laswap2014.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="480" max-vertical-offset="3165">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="480" max-vertical-offset="3165">
+              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6698565" vertical-offset="630" max-vertical-offset="3270">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.9411764" vertical-offset="630" max-vertical-offset="3270">
+              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -84,11 +85,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/insight.html" />
         <option value="$PROJECT_DIR$/kaggle.html" />
         <option value="$PROJECT_DIR$/wikiwhere.html" />
         <option value="$PROJECT_DIR$/laswap2014.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/insight.html" />
       </list>
     </option>
   </component>
@@ -336,14 +337,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/insight.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125" vertical-offset="2415" max-vertical-offset="3120">
-          <caret line="174" column="57" selection-start-line="174" selection-start-column="57" selection-end-line="174" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kaggle.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.3529413" vertical-offset="2265" max-vertical-offset="3105">
@@ -362,16 +355,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laswap2014.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="480" max-vertical-offset="3165">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="480" max-vertical-offset="3165">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6698565" vertical-offset="630" max-vertical-offset="3270">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.9411764" vertical-offset="630" max-vertical-offset="3270">
+          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insight.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71100914" vertical-offset="765" max-vertical-offset="3120">
+          <caret line="82" column="128" selection-start-line="82" selection-start-column="128" selection-end-line="82" selection-end-column="128" />
           <folding />
         </state>
       </provider>
